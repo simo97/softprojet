@@ -1,0 +1,253 @@
+<?php 
+
+namespace ProjectBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+* 
+* @ORM\Table(name="Phase")
+* @ORM\Entity
+*/
+class Phase {
+    /**
+     * @ORM\Id
+     * @ORM\Column(type="integer")
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+    
+    /**
+     * @ORM\Column(type="string", length=50)
+     */
+    private $nom;
+    
+    /**
+     * @ORM\Column(type="datetime", length=50)
+     * 
+     */
+    private $dateDebut;
+    
+    /**
+     * @ORM\Column(type="boolean")
+     */
+    private $close;
+    
+    /**
+     * @ORM\Column(type="datetime")
+     */
+    private $dateFin;
+    
+    /**
+     * @ORM\Column(type="text")
+     */
+    private $intitule;
+    
+    /**
+     * @ORM\ManyToMany(targetEntity="Utilisateur", mappedBy="phases")
+     */
+    private $utilisateur;
+    
+    
+    /*private $phases;// la liste des phase du projet
+    private $membres;// type utilisateur*/
+    
+    /**
+     * // many phases has one project
+     * @ORM\ManyToOne(targetEntity="Projet", inversedBy="phases")
+     * @ORM\JoinColumn(name="projet_id", referencedColumnName="id")
+     */
+    private $projets;
+    
+    public function __construct() {
+        $this->utilisateur = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set nom
+     *
+     * @param string $nom
+     *
+     * @return Phase
+     */
+    public function setNom($nom)
+    {
+        $this->nom = $nom;
+
+        return $this;
+    }
+
+    /**
+     * Get nom
+     *
+     * @return string
+     */
+    public function getNom()
+    {
+        return $this->nom;
+    }
+
+    /**
+     * Set dateDebut
+     *
+     * @param \DateTime $dateDebut
+     *
+     * @return Phase
+     */
+    public function setDateDebut($dateDebut)
+    {
+        $this->dateDebut = $dateDebut;
+
+        return $this;
+    }
+
+    /**
+     * Get dateDebut
+     *
+     * @return \DateTime
+     */
+    public function getDateDebut()
+    {
+        return $this->dateDebut;
+    }
+
+    /**
+     * Set dateFin
+     *
+     * @param \DateTime $dateFin
+     *
+     * @return Phase
+     */
+    public function setDateFin($dateFin)
+    {
+        $this->dateFin = $dateFin;
+
+        return $this;
+    }
+
+    /**
+     * Get dateFin
+     *
+     * @return \DateTime
+     */
+    public function getDateFin()
+    {
+        return $this->dateFin;
+    }
+
+    /**
+     * Set intitule
+     *
+     * @param string $intitule
+     *
+     * @return Phase
+     */
+    public function setIntitule($intitule)
+    {
+        $this->intitule = $intitule;
+
+        return $this;
+    }
+
+    /**
+     * Get intitule
+     *
+     * @return string
+     */
+    public function getIntitule()
+    {
+        return $this->intitule;
+    }
+
+    /**
+     * Add utilisateur
+     *
+     * @param \ProjectBundle\Entity\Utilisateur $utilisateur
+     *
+     * @return Phase
+     */
+    public function addUtilisateur(\ProjectBundle\Entity\Utilisateur $utilisateur)
+    {
+        $this->utilisateur[] = $utilisateur;
+
+        return $this;
+    }
+
+    /**
+     * Remove utilisateur
+     *
+     * @param \ProjectBundle\Entity\Utilisateur $utilisateur
+     */
+    public function removeUtilisateur(\ProjectBundle\Entity\Utilisateur $utilisateur)
+    {
+        $this->utilisateur->removeElement($utilisateur);
+    }
+
+    /**
+     * Get utilisateur
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getUtilisateur()
+    {
+        return $this->utilisateur;
+    }
+
+    /**
+     * Set projets
+     *
+     * @param \ProjectBundle\Entity\Projet $projets
+     *
+     * @return Phase
+     */
+    public function setProjets(\ProjectBundle\Entity\Projet $projets = null)
+    {
+        $this->projets = $projets;
+
+        return $this;
+    }
+
+    /**
+     * Get projets
+     *
+     * @return \ProjectBundle\Entity\Projet
+     */
+    public function getProjets()
+    {
+        return $this->projets;
+    }
+
+    /**
+     * Set close
+     *
+     * @param boolean $close
+     *
+     * @return Phase
+     */
+    public function setClose($close)
+    {
+        $this->close = $close;
+
+        return $this;
+    }
+
+    /**
+     * Get close
+     *
+     * @return boolean
+     */
+    public function getClose()
+    {
+        return $this->close;
+    }
+}

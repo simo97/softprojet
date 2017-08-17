@@ -1,0 +1,15 @@
+# This file is auto-generated during the composer install
+parameters:
+    database_host: 127.0.0.1
+    database_port: 3306
+    database_name: nedgecmc_cogeni
+    database_user: nedgecmc_cogeni
+    database_password: cogeni@2017
+    mailer_transport: smtp
+    mailer_host: 127.0.0.1
+    mailer_user: null
+    mailer_password: null
+    secret: 8dcdcdbb46d15eda90045a1289fe48e9149cdc8e
+    nexmo_api_key: 0b5df9c3
+    nexmo_api_secret: 9d26587b07bd4a78
+    nexmo_from_name: SoftProject

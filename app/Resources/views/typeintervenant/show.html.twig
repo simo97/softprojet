@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Typeintervenant</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ typeIntervenant.id }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ typeIntervenant.nom }}</td>
+            </tr>
+            <tr>
+                <th>Niveau</th>
+                <td>{{ typeIntervenant.niveau }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('typeintervenant_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('typeintervenant_edit', { 'id': typeIntervenant.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

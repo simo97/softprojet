@@ -1,0 +1,70 @@
+body {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #fafafa;
+}
+
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 10px;
+}
+.form-signin .checkbox {
+  font-weight: normal;
+}
+.form-signin .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+#login-input,#pwd-input{
+  margin-bottom: 5px;
+  border-radius: 0;
+  border-color: rgba(0,0,0,0.1)
+}
+#login-input:hover,#login-input:focus,#pwd-input:hover,#pwd-input:focus{
+  box-shadow:none
+}
+#submit-btn{
+  margin-top: 1pc;
+  border-radius: 0;
+  background-color: #ff6b2b;
+  border-color: #ff6b2b;
+}
+.principal{
+  position: relative;
+  bottom: 40px;
+  background-color: #fafafa;
+  border-color: #fafafa;
+}
+#logo{
+  position: relative;
+  bottom: 10px;
+}
+#label-cogeni{
+  color:#4cac6c;
+}
+.intro-text{
+  color:#00be5a;
+}

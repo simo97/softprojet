@@ -1,0 +1,114 @@
+{% extends "ProjectBundle:Default:template.html.twig" %}
+
+{% block content %}
+    <div class="col-lg-offset-2 col-lg-7">
+            <div class="well" style="border: solid #31b0d5 1px; border-radius: 0px 0px 0px 0px; background-color: whitesmoke;">
+                <form name="formulaire1" action="{{ path('save_prj') }}" method="POST" >
+                    <legend>
+                        <p>
+                            Création d'un projet
+                        </p>
+                    </legend>
+                    <fieldset>
+                        <div class="col-lg-5">
+                            <label for="Np"> Nom du projet</label>
+                            <input required="required" type="text" class="form-control" name="Np" id="Np">
+                        </div>
+                        <div class="col-lg-6">
+                            <label for="desc">Description</label>
+                            <textarea required="required"  class="form-control" name="desc" id="desc">
+                            </textarea>
+                        </div>
+                        <div class="col-lg-5">
+                            <label for="dd">Date de debut</label>
+                            <input required="required" type="date" class="form-control" name="dd" id="dd">
+                        </div>
+                        <div class="col-lg-6">
+                            <label for="df">Date de Fin</label>
+                            <input required="required" type="date" class="form-control" name="df" id="df">
+                        </div>
+                        <div class="col-lg-11">
+                            <label for="cout">Coût</label>
+                            <input required="required" type="number" class="form-control" name="cout" id="cout"> 
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <br>
+                                <label for="resp">Responsable </label>
+                                <input required="required" type="text" class="form-control"  name="resp" id="resp">
+                            </div>
+                            <div class=" col-lg-offset-1 col-lg-3">
+                                <br>
+                                <label for="email">Email:</label>
+                                <input required="required" type="email" class="form-control" name="email" id="email">
+                            </div>
+                            <div class=" col-lg-offset-1 col-lg-3">
+                                <br>
+                                <label for="phone">Telephone:</label>
+                                <input required="required" type="tel" class="form-control" name="phone" id="phone">
+                            </div>
+                        </div>
+
+                    </fieldset>
+                    <br><br>
+                    <div class="intervenant">
+                        <legend>
+                            <p>
+                                <a href="#" class="btn btn-info " id='interv1' style="border-radius: 25px 25px 25px 25px;"><span class="glyphicon-plus"></span>
+                                Ajouter un Intervenant</a>
+                                <!--span id="n">1</span -->
+                            </p>
+                        </legend>
+                        <div class="row" id="intervenant1">
+                            <div class="col-lg-3">
+                                <br>
+                                <label for="resp">Nom </label>
+                                <input type="text" class="form-control" name="inter_princ_name[]" id="resp">
+                            </div>
+                            <div class=" col-lg-offset-1 col-lg-3">
+                                <br>
+                                <label for="email">Email:</label>
+                                <input type="email" class="form-control" name="inter_princ_email[]" id="email">
+                            </div>
+                            <div class=" col-lg-offset-1 col-lg-3">
+                                <br>
+                                <label for="phone">Telephone:</label>
+                                <input  type="number" class="form-control" name="inter_princ_tel[]" id="phone">
+                            </div>
+                        </div>
+                        <div class="row" id="new-inter1" >
+                            <div class="col-lg-3">
+                                <br>
+                                <label for="resp">Nom </label>
+                                <input  type="text" class="form-control" name="inter_princ_name[]" id="resp">
+                            </div>
+                            <div class=" col-lg-offset-1 col-lg-3">
+                                <br>
+                                <label for="email">Email:</label>
+                                <input  type="email" class="form-control" name="inter_princ_email[]" id="email">
+                            </div>
+                            <div class=" col-lg-offset-1 col-lg-3">
+                                <br>
+                                <label for="phone">Telephone:</label>
+                                <input  type="number" class="form-control" name="inter_princ_tel[]" id="phone">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" id="new-inter1" >
+                        <div class="col-lg-12">
+                            <br>
+                            <label for="resp">Nombre de phase </label>
+                            <input required="required" type="text"class="form-control" name="nbr" >
+                        </div>
+                    </div>
+                    <br>    
+                    
+                  <input required="required" type="hidden" name="nbr_phase" value="1">
+                   <input type="submit" class="btn btn-info glyphicon-save col-lg-offset-5" value="Enregistrer">
+                  
+                </form>
+            </div>
+        </div>
+{% endblock %}
+

@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/bootstrap.min.css">       
+    </head>
+    <body>
+        <div class="col-lg-offset-2 col-lg-7">
+            <div class="well" style="border: solid #31b0d5 1px; border-radius: 0px 0px 0px 0px; background-color: whitesmoke;">
+                <form name="formulaire1" method="POST" >
+                    <legend>
+                        <p>
+                            Création d'un projet
+                        </p>
+                    </legend>
+                    <fieldset>
+                        <div class="col-lg-5">
+                            <label for="Np"> Nom du projet</label>
+                            <input required="required" type="text" class="form-control" name="Np" id="Np">
+                        </div>
+                        <div class="col-lg-6">
+                            <label for="desc">Description</label>
+                            <textarea required="required"  class="form-control" name="desc" id="desc">
+                            </textarea>
+                        </div>
+                        <div class="col-lg-5">
+                            <label for="dd">Date de debut</label>
+                            <input required="required" type="date" class="form-control" name="dd" id="dd">
+                        </div>
+                        <div class="col-lg-6">
+                            <label for="df">Date de Fin</label>
+                            <input required="required" type="date" class="form-control" name="df" id="df">
+                        </div>
+                        <div class="col-lg-11">
+                            <label for="cout">Coût</label>
+                            <input required="required" type="number" class="form-control" name="cout" id="cout"> 
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <br>
+                                <label for="resp">Responsable du projet</label>
+                                <input required="required" type="text"  name="resp" id="resp">
+                            </div>
+                            <div class=" col-lg-offset-1 col-lg-3">
+                                <br>
+                                <label for="email">Email:</label>
+                                <input required="required" type="email"  name="email" id="email">
+                            </div>
+                            <div class=" col-lg-offset-1 col-lg-3">
+                                <br>
+                                <label for="phone">Telephone:</label>
+                                <input required="required" type="tel"  name="phone" id="phone">
+                            </div>
+                        </div>
+
+                    </fieldset>
+                    <br><br>
+                    <div class="intervenant">
+                        <legend>
+                            <p>
+                                <a href="#" class="btn btn-info " id='interv1' style="border-radius: 25px 25px 25px 25px;"><span class="glyphicon-plus"></span>
+                                Ajouter un Intervenant</a>
+                            </p>
+                        </legend>
+                        <div class="row" id="intervenant1">
+                            <div class="col-lg-3">
+                                <br>
+                                <label for="resp">Nom </label>
+                                <input required="required" type="text"  name="resp" id="resp">
+                            </div>
+                            <div class=" col-lg-offset-1 col-lg-3">
+                                <br>
+                                <label for="email">Email:</label>
+                                <input required="required" type="email"  name="email" id="email">
+                            </div>
+                            <div class=" col-lg-offset-1 col-lg-3">
+                                <br>
+                                <label for="phone">Telephone:</label>
+                                <input required="required" type="tel"  name="phone" id="phone">
+                            </div>
+                        </div>
+                        <div class="row" id="new-inter1" >
+                            <div class="col-lg-3">
+                                <br>
+                                <label for="resp">Nom </label>
+                                <input required="required" type="text"  name="resp" id="resp">
+                            </div>
+                            <div class=" col-lg-offset-1 col-lg-3">
+                                <br>
+                                <label for="email">Email:</label>
+                                <input required="required" type="email"  name="email" id="email">
+                            </div>
+                            <div class=" col-lg-offset-1 col-lg-3">
+                                <br>
+                                <label for="phone">Telephone:</label>
+                                <input required="required" type="tel"  name="phone" id="phone">
+                            </div>
+                        </div>
+                    </div>
+                    <br><br>
+                    <legend>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <p>
+                            <a href="#" id="new-phase-btn"  class="btn btn-info " style="border-radius: 25px 25px 25px 25px;"><span class="glyphicon-plus"></span>
+                            Ajouter une Phase</a>
+                        </p>
+                    </legend>
+              		<span id="Project-phase">
+	                    <div style="background-color:rgb(200,200,200);padding: 20px; border-radius: 10px 10px 10px 10px;">
+	                    	<fieldset>
+	                    		
+		                            <div class="col-lg-5">
+		                                <label for="Npp"> Nom de la Phase</label>
+		                                <input required="required" type="text" class="form-control" name="Npp" id="Npp">
+		                            </div>
+		                            <div class="col-lg-6">
+		                                <label for="descp">Description</label>
+		                                <textarea required="required"  class="form-control" name="descp" id="descp">
+		                            
+		                                </textarea>
+		                            </div>
+		                            <div class="col-lg-5">
+		                                <label for="ddp">Date de debut</label>
+		                                <input required="required" type="date" class="form-control" name="ddp" id="ddp">
+		                            </div>
+		                            <div class="col-lg-6">
+		                                <label for="dfp">Date de Fin</label>
+		                                <input required="required" type="date" class="form-control" name="dfp" id="dfp">
+		                            </div>
+		                            <div class="col-lg-11">
+		                                <label for="coutp">Coût</label>
+		                                <input required="required" type="number" class="form-control" name="coutp" id="coutp"> 
+		                            </div>
+		                            <div class="row">
+		                                <div class="col-lg-3">
+		                                    <br>
+		                                    <label for="respp">Responsable du projet</label>
+		                                    <input required="required" type="text"  name="respp" id="respp">
+		                                </div>
+		                                <div class=" col-lg-offset-1 col-lg-3">
+		                                    <br>
+		                                    <label for="emailp">Email:</label>
+		                                    <input required="required" type="email"  name="emailp" id="emailp">
+		                                </div>
+		                                <div class=" col-lg-offset-1 col-lg-3">
+		                                    <br>
+		                                    <label for="phonep">Telephone:</label>
+		                                    <input required="required" type="tel"  name="phonep" id="phonep">
+		                                </div>
+		                            </div>
+		                            <div class="col-lg-5">
+		                                <label for="Npp"> Nom de la Phase</label>
+		                                <input required="required" type="text" class="form-control" name="Npp" id="Npp">
+		                            </div>
+		                            <div class="col-lg-6">
+		                                <label for="descp">Description</label>
+		                                <textarea required="required"  class="form-control" name="descp" id="descp">
+		                            
+		                                </textarea>
+		                            </div>
+		                            <div class="col-lg-5">
+		                                <label for="ddp">Date de debut</label>
+		                                <input required="required" type="date" class="form-control" name="ddp" id="ddp">
+		                            </div>
+		                            <div class="col-lg-6">
+		                                <label for="dfp">Date de Fin</label>
+		                                <input required="required" type="date" class="form-control" name="dfp" id="dfp">
+		                            </div>
+		                            <div class="col-lg-11">
+		                                <label for="coutp">Coût</label>
+		                                <input required="required" type="number" class="form-control" name="coutp" id="coutp"> 
+		                            </div>
+		                            <div class="row">
+		                                <div class="col-lg-3">
+		                                    <br>
+		                                    <label for="respp">Responsable du projet</label>
+		                                    <input required="required" type="text"  name="respp" id="respp">
+		                                </div>
+		                                <div class=" col-lg-offset-1 col-lg-3">
+		                                    <br>
+		                                    <label for="emailp">Email:</label>
+		                                    <input required="required" type="email"  name="emailp" id="emailp">
+		                                </div>
+		                                <div class=" col-lg-offset-1 col-lg-3">
+		                                    <br>
+		                                    <label for="phonep">Telephone:</label>
+		                                    <input required="required" type="tel"  name="phonep" id="phonep">
+		                                </div>
+		                            </div>
+	                            
+	                        </fieldset>
+	                        <br>
+	                        <br><br>
+	                        <legend>
+	                            <p>
+	                                <a href="#" id="interv" class="btn btn-info " style="border-radius: 25px 25px 25px 25px;"><span class="glyphicon-plus"></span>
+	                                Ajouter un Intervenant</a>
+	                            </p>
+	                        </legend>
+	                            <div  style="background-color: #C5C5C5; padding: 20px; border-radius: 10px 10px 10px 10px;">
+		                            <div id="intervenant" class="row">
+		                                    <div class="col-lg-3">
+		                                        <br>
+		                                        <label for="resp">Nom </label>
+		                                        <input required="required" type="text"  name="resp[]" id="resp">
+		                                    </div>
+		                                    <div class=" col-lg-offset-1 col-lg-3">
+		                                        <br>
+		                                        <label for="email">Email:</label>
+		                                        <input required="required" type="email"  name="email[]" id="email">
+		                                    </div>
+		                                    <div class=" col-lg-offset-1 col-lg-3">
+		                                        <br>
+		                                        <label for="phone">Telephone:</label>
+		                                        <input required="required" type="tel"  name="phone[]" id="phone">
+		                                    </div>
+		                                </div>
+		                                <div class="row" id="new-inter">
+		                                    <div class="col-lg-3">
+		                                        <br>
+		                                        <label for="resp">Nom </label>
+		                                        <input required="required" type="text"  name="resp[]" id="resp">
+		                                    </div>
+		                                    <div class=" col-lg-offset-1 col-lg-3">
+		                                        <br>
+		                                        <label for="email">Email:</label>
+		                                        <input required="required" type="email"  name="email[]" id="email">
+		                                    </div>
+		                                    <div class=" col-lg-offset-1 col-lg-3">
+		                                        <br>
+		                                        <label for="phone">Telephone:</label>
+		                                        <input required="required" type="tel"  name="phone[]" id="phone">
+		                                    </div>
+		                                </div>
+		                                <br><br>
+	                            </div>
+	                    </div>
+	                    <br>
+	                    </span> 
+	                <span id="New-Project-phase">
+	                    <div style="background-color:rgb(200,200,200);padding: 20px; border-radius: 10px 10px 10px 10px;">
+	                    	<fieldset>
+	                    		
+		                            <div class="col-lg-5">
+		                                <label for="Npp"> Nom de la Phase</label>
+		                                <input required="required" type="text" class="form-control" name="Npp" id="Npp">
+		                            </div>
+		                            <div class="col-lg-6">
+		                                <label for="descp">Description</label>
+		                                <textarea required="required"  class="form-control" name="descp" id="descp">
+		                                </textarea>
+		                            </div>
+		                            <div class="col-lg-5">
+		                                <label for="ddp">Date de debut</label>
+		                                <input required="required" type="date" class="form-control" name="ddp" id="ddp">
+		                            </div>
+		                            <div class="col-lg-6">
+		                                <label for="dfp">Date de Fin</label>
+		                                <input required="required" type="date" class="form-control" name="dfp" id="dfp">
+		                            </div>
+		                            <div class="col-lg-11">
+		                                <label for="coutp">Coût</label>
+		                                <input required="required" type="number" class="form-control" name="coutp" id="coutp"> 
+		                            </div>
+		                            <div class="row">
+		                                <div class="col-lg-3">
+		                                    <br>
+		                                    <label for="respp">Responsable du projet</label>
+		                                    <input required="required" type="text"  name="respp" id="respp">
+		                                </div>
+		                                <div class=" col-lg-offset-1 col-lg-3">
+		                                    <br>
+		                                    <label for="emailp">Email:</label>
+		                                    <input required="required" type="email"  name="emailp" id="emailp">
+		                                </div>
+		                                <div class=" col-lg-offset-1 col-lg-3">
+		                                    <br>
+		                                    <label for="phonep">Telephone:</label>
+		                                    <input required="required" type="tel"  name="phonep" id="phonep">
+		                                </div>
+		                            </div>
+		                            <div class="col-lg-5">
+		                                <label for="Npp"> Nom de la Phase</label>
+		                                <input required="required" type="text" class="form-control" name="Npp" id="Npp">
+		                            </div>
+		                            <div class="col-lg-6">
+		                                <label for="descp">Description</label>
+		                                <textarea required="required"  class="form-control" name="descp" id="descp">
+		                            
+		                                </textarea>
+		                            </div>
+		                            <div class="col-lg-5">
+		                                <label for="ddp">Date de debut</label>
+		                                <input required="required" type="date" class="form-control" name="ddp" id="ddp">
+		                            </div>
+		                            <div class="col-lg-6">
+		                                <label for="dfp">Date de Fin</label>
+		                                <input required="required" type="date" class="form-control" name="dfp" id="dfp">
+		                            </div>
+		                            <div class="col-lg-11">
+		                                <label for="coutp">Coût</label>
+		                                <input required="required" type="number" class="form-control" name="coutp" id="coutp"> 
+		                            </div>
+		                            <div class="row">
+		                                <div class="col-lg-3">
+		                                    <br>
+		                                    <label for="respp">Responsable du projet</label>
+		                                    <input required="required" type="text"  name="respp" id="respp">
+		                                </div>
+		                                <div class=" col-lg-offset-1 col-lg-3">
+		                                    <br>
+		                                    <label for="emailp">Email:</label>
+		                                    <input required="required" type="email"  name="emailp" id="emailp">
+		                                </div>
+		                                <div class=" col-lg-offset-1 col-lg-3">
+		                                    <br>
+		                                    <label for="phonep">Telephone:</label>
+		                                    <input required="required" type="tel"  name="phonep" id="phonep">
+		                                </div>
+		                            </div>
+	                            
+	                        </fieldset>
+	                        <br>
+	                        <br><br>
+	                        <legend>
+	                            <p>
+	                                <a href="#" id="interv" class="btn btn-info " style="border-radius: 25px 25px 25px 25px;"><span class="glyphicon-plus"></span>
+	                                Ajouter un Intervenant</a>
+	                            </p>
+	                        </legend>
+	                            <div  style="background-color: #C5C5C5; padding: 20px; border-radius: 10px 10px 10px 10px;">
+		                            <div id="intervenant" class="row">
+		                                    <div class="col-lg-3">
+		                                        <br>
+		                                        <label for="resp">Nom </label>
+		                                        <input required="required" type="text"  name="resp[]" id="resp">
+		                                    </div>
+		                                    <div class=" col-lg-offset-1 col-lg-3">
+		                                        <br>
+		                                        <label for="email">Email:</label>
+		                                        <input required="required" type="email"  name="email[]" id="email">
+		                                    </div>
+		                                    <div class=" col-lg-offset-1 col-lg-3">
+		                                        <br>
+		                                        <label for="phone">Telephone:</label>
+		                                        <input required="required" type="tel"  name="phone[]" id="phone">
+		                                    </div>
+		                                </div>
+		                                <div class="row" id="new-inter">
+		                                    <div class="col-lg-3">
+		                                        <br>
+		                                        <label for="resp">Nom </label>
+		                                        <input required="required" type="text"  name="resp[]" id="resp">
+		                                    </div>
+		                                    <div class=" col-lg-offset-1 col-lg-3">
+		                                        <br>
+		                                        <label for="email">Email:</label>
+		                                        <input required="required" type="email"  name="email[]" id="email">
+		                                    </div>
+		                                    <div class=" col-lg-offset-1 col-lg-3">
+		                                        <br>
+		                                        <label for="phone">Telephone:</label>
+		                                        <input required="required" type="tel"  name="phone[]" id="phone">
+		                                    </div>
+		                                </div>
+		                                <br><br>
+	                            </div>
+	                    </div>
+	                    <br>
+	                    </span>     
+                    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	                <input required="required" type="hidden" name="nbr_phase" value="1">
+                    <input type="submit" class="btn btn-info glyphicon-save col-lg-offset-5" value="Enregistrer">
+                	
+                </form>
+            </div>
+        </div>
+        <script src="jquery.js"></script>
+        <script src="element-adder.js"></script>
+    </body>
+</html>
+

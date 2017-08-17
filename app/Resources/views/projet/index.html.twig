@@ -1,0 +1,45 @@
+{% extends "ProjectBundle:Default:template.html.twig" %}
+
+{% block content %}
+    <h1>Projets list</h1>
+
+    <table class='table'>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Titre</th>
+                <th>Intitule</th>
+                <th>Datedebut</th>
+                <th>Datefin</th>
+                <th>Cout</th>
+                <th>Close</th>
+                <th colspan='2'>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for projet in projets %}
+            <tr>
+                <td><a href="{{ path('projet_show', { 'id': projet.id }) }}">{{ projet.id }}</a></td>
+                <td>{{ projet.titre }}</td>
+                <td>{{ projet.intitule }}</td>
+                <td>{% if projet.dateDebut %}{{ projet.dateDebut|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{% if projet.dateFin %}{{ projet.dateFin|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{{ projet.cout }}</td>
+                <td>{% if projet.close %}Yes{% else %}No{% endif %}</td>
+                <td>
+                    <a href="{{ path('projet_show', { 'id': projet.id }) }}">Details</a>
+                </td>
+                <td>
+                    <a href="{{ path('projet_edit', { 'id': projet.id }) }}">Editer</a>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('projet_new') }}">Create a new projet</a>
+        </li>
+    </ul>
+{% endblock %}

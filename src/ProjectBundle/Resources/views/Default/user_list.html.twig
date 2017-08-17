@@ -1,0 +1,43 @@
+{# empty Twig template #}
+{% extends "ProjectBundle:Default:template.html.twig" %}
+
+{% block content %}
+    <h1>Listes des utilisateurs</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Login</th>
+                <th>Pass</th>
+                <th>Salt</th>
+                <th>Nom</th>
+                <th>Prenom</th>
+                <th>Mail</th>
+                <th>Telephone</th>
+                <th colspan='2'>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for utilisateur in utilisateurs %}
+            <tr>
+                <td><a href="{{ path('utilisateur_show', { 'id': utilisateur.id }) }}">{{ utilisateur.id }}</a></td>
+                <td>{{ utilisateur.login }}</td>
+                <td>{{ utilisateur.pass }}</td>
+                <td>{{ utilisateur.salt }}</td>
+                <td>{{ utilisateur.nom }}</td>
+                <td>{{ utilisateur.prenom }}</td>
+                <td>{{ utilisateur.mail }}</td>
+                <td>{{ utilisateur.telephone }}</td>
+                <td>
+                    <a href="{{ path('utilisateur_show', { 'id': utilisateur.id }) }}">Detail</a>
+                </td>
+                <td>    
+                <a href="{{ path('utilisateur_edit', { 'id': utilisateur.id }) }}">Editer</a>
+                    
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

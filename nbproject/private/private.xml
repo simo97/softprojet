@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/home/adonis97/Documents/codages/study_symfo/src/ProjectBundle/Form/ProjetType.php</file>
+            <file>file:/home/adonis97/Documents/codages/study_symfo/src/ProjectBundle/Controller/DefaultController.php</file>
+            <file>file:/home/adonis97/Documents/codages/study_symfo/app/Resources/views/projet/index.html.twig</file>
+            <file>file:/home/adonis97/Documents/codages/study_symfo/src/ProjectBundle/Entity/Utilisateur.php</file>
+            <file>file:/home/adonis97/Documents/codages/study_symfo/src/ProjectBundle/Resources/views/Default/template.html.twig</file>
+            <file>file:/home/adonis97/Documents/codages/study_symfo/src/ProjectBundle/Controller/AuthentificationController.php</file>
+            <file>file:/home/adonis97/Documents/codages/study_symfo/src/ProjectBundle/Controller/PhaseController.php</file>
+            <file>file:/home/adonis97/Documents/codages/study_symfo/app/Resources/views/projet/show.html.twig</file>
+            <file>file:/home/adonis97/Documents/codages/study_symfo/src/ProjectBundle/Resources/views/Default/dashboard.html.twig</file>
+            <file>file:/home/adonis97/Documents/codages/study_symfo/src/ProjectBundle/Entity/Projet.php</file>
+            <file>file:/home/adonis97/Documents/codages/study_symfo/src/ProjectBundle/Entity/Phase.php</file>
+        </group>
+    </open-files>
+</project-private>

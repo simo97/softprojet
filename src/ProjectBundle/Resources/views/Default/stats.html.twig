@@ -1,0 +1,47 @@
+{% extends "ProjectBundle:Default:template.html.twig" %}
+{% block content %}
+        <div class="container">
+        <div class="row">
+              <div class="col-md-4 col-offset-1">
+                  <select class="form-control">
+                      <option>Projet 1</option>
+                      <option>Projet 2</option>
+                      <option>Projet 3</option>
+                </select>
+             </div>
+          </div>
+            <div class="row">
+              <div class="col-md-4 col-offset-1">
+                  <canvas id="myChart"></canvas>
+             </div>
+          </div>
+        </div> 
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js">  </script>
+        <script>
+            var ctx = document.getElementById('myChart').getContext('2d');
+            var chart = new Chart(ctx, {
+    // The type of chart we want to create
+    type: 'doughnut',
+
+    // The data for our dataset
+    data: {
+        labels: ["Projets Terminés", "Projets Non Terminés"],
+        datasets: [{
+            label: "My First dataset",
+            data: [52, 10,],
+            backgroundColor: [
+            ('#ff6384'),
+            ('#36a2eb'),
+            
+        ]
+
+        }]
+    },
+
+    // Configuration options go here
+    options: {}
+});
+
+        </script>
+{% endblock %}

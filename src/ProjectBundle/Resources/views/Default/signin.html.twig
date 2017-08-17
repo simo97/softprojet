@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    
+    <meta name="Bivindi" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Soft Project</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{{ asset('assets/css/bootstrap_prj.min.css') }}" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="{{ asset('assets/css/signin.css') }}" rel="stylesheet">
+  </head>
+
+  <body>
+<nav class="principal navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" id="logo" href="#"><img src="{{ asset('assets/img/mini.png') }}"></a>
+      <a class="navbar-brand" id="label-cogeni" href="#">COGENI</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+       
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+    <div class="container">
+      <form class="form-signin" action="{{ path("authenticate") }}" method="POST">
+        <h3 class="form-signin-heading text-center intro-text">Connectez-vous</h3>
+        <input type="text" id="login-input" name="login" class="form-control" placeholder="Votre Login" required autofocus>
+        <input type="password" id="pwd-input" name="pass" class="form-control" placeholder="Mot de Passe" required>
+        <input class="btn btn-lg btn-primary btn-block" id="submit-btn" type="submit" value="Connexion"/>
+      </form>
+    </div> <!-- /container -->
+
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    
+  </body>
+</html>
